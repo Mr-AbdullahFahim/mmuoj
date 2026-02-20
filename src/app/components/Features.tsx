@@ -14,18 +14,6 @@ const features = [
     description: 'Get your food delivered on time before Suhur and at Iftar time.',
     color: 'bg-blue-100 text-blue-600'
   },
-  // {
-  //   icon: MapPin,
-  //   title: 'Real-time Tracking',
-  //   description: 'Track your delivery in real-time and know exactly when it arrives.',
-  //   color: 'bg-purple-100 text-purple-600'
-  // },
-  // {
-  //   icon: ShoppingCart,
-  //   title: 'Easy Ordering',
-  //   description: 'Simple and quick ordering process - select meals and checkout in seconds.',
-  //   color: 'bg-orange-100 text-orange-600'
-  // },
   {
     icon: Bell,
     title: 'Order Notifications',
@@ -42,37 +30,37 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="py-20 bg-white">
+    <section id="features" className="py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl text-gray-900 mb-3 md:mb-4 leading-tight">
             Everything you need for Ramadan
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-base sm:text-xl text-gray-600 px-2">
             A complete food delivery solution for Suhur and Iftar during the blessed month.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <motion.div 
                 key={index}
-                className="p-6 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow bg-white"
+                className="p-6 md:p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow bg-white text-center sm:text-left flex flex-col items-center sm:items-start"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
-                <div className={`w-12 h-12 ${feature.color} rounded-xl flex items-center justify-center mb-4`}>
+                <div className={`w-12 h-12 ${feature.color} rounded-xl flex items-center justify-center mb-4 md:mb-5`}>
                   <Icon size={24} />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl text-gray-900 font-semibold mb-2">{feature.title}</h3>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             );
           })}
