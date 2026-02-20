@@ -5,7 +5,7 @@ export function FloatingShapes() {
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {/* Geometric Shapes */}
       <motion.div
-        className="absolute top-20 left-10 w-20 h-20 border-2 border-emerald-300/20 rounded-lg"
+        className="absolute top-10 left-5 md:top-20 md:left-10 w-12 h-12 md:w-20 md:h-20 border-2 border-emerald-300/20 rounded-lg"
         animate={{
           rotate: [0, 360],
           y: [0, -30, 0],
@@ -18,7 +18,7 @@ export function FloatingShapes() {
       />
 
       <motion.div
-        className="absolute top-40 right-20 w-16 h-16 border-2 border-teal-300/20 rounded-full"
+        className="absolute top-24 right-5 md:top-40 md:right-20 w-10 h-10 md:w-16 md:h-16 border-2 border-teal-300/20 rounded-full"
         animate={{
           scale: [1, 1.2, 1],
           x: [0, 20, 0],
@@ -31,7 +31,7 @@ export function FloatingShapes() {
       />
 
       <motion.div
-        className="absolute bottom-40 left-20 w-24 h-24 border-2 border-emerald-300/20"
+        className="absolute bottom-24 left-10 md:bottom-40 md:left-20 w-16 h-16 md:w-24 md:h-24 border-2 border-emerald-300/20"
         style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
         animate={{
           rotate: [0, 180, 360],
@@ -45,7 +45,7 @@ export function FloatingShapes() {
       />
 
       <motion.div
-        className="absolute bottom-20 right-40 w-14 h-14 bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-xl"
+        className="absolute bottom-10 right-10 md:bottom-20 md:right-40 w-10 h-10 md:w-14 md:h-14 bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-xl"
         animate={{
           rotate: [0, -360],
           scale: [1, 1.3, 1],
@@ -58,10 +58,10 @@ export function FloatingShapes() {
       />
 
       {/* Particle-like dots */}
-      {[...Array(12)].map((_, i) => (
+      {[...Array(8)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-emerald-400/20 rounded-full"
+          className="absolute w-1.5 h-1.5 md:w-2 md:h-2 bg-emerald-400/20 rounded-full"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,

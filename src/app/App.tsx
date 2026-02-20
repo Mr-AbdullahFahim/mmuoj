@@ -1,6 +1,6 @@
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
-import { Features } from './components/Features';
+import { Features } from './components/Features'
 import { HowItWorks } from './components/HowItWorks';
 import { AppShowcase } from './components/AppShowcase';
 import { DownloadCTA } from './components/DownloadCTA';
@@ -12,7 +12,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <Features />
+        <Features/>
         <HowItWorks />
         <AppShowcase />
         <DownloadCTA />
