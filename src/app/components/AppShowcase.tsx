@@ -17,7 +17,7 @@ export function AppShowcase() {
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400/10 to-teal-400/10 rounded-3xl blur-3xl"></div>
             <ImageWithFallback 
-              src="/assets/delivery.png"
+              src="/assets/delivery.webp"
               alt="Delivery partner"
               className="relative rounded-3xl shadow-2xl w-full h-auto"
             />

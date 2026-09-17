@@ -61,13 +61,14 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Image */}
           <div className="relative mt-8 lg:mt-0 px-4 sm:px-8 lg:px-0">
             <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400/20 to-teal-400/20 rounded-3xl blur-2xl sm:blur-3xl"></div>
             <ImageWithFallback 
-              src="/assets/hero.png"
+              src="/assets/hero.webp"
               alt="Food delivery during Ramadan"
               className="relative rounded-3xl shadow-2xl w-full max-w-md mx-auto lg:max-w-none h-auto object-cover"
+              fetchPriority="high"
+              loading="eager"
             />
           </div>
         </div>
